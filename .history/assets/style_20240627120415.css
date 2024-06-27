@@ -83,8 +83,6 @@ button[type="submit"]:hover {
     }
 }
 
-
-
 /* Style for the form container */
 .form-container {
     display: flex;
@@ -236,45 +234,4 @@ button[type="submit"]:hover {
 .form-group.success .form-success {
     color: green;
     font-size: 12px;
-    margin-top: 5px;}
-
-/* Style for the form input group with error input */
-.form-group.error .form-input {
-    border-color: red;
-}
-
-/* Style for the form input group with success input */
-.form-group.success .form-input {
-    border-color: green;
-}
-
-/* Style for the form input group with error label */
-.form-group.error .form-label {
-    color: red;
-}
-
-/* Style for the form input group with success label */
-.form-group.success .form-label {
-    color: green;
-}
-
-/* Style for the form input group with error message */
-.form-group.error .form-error {
-    color: red;
-    font-size: 12px;
     margin-top: 5px;
-}
-
-/* Style for the form input group with success message */
-.form-group.success .form-success {
-    color: green;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-/* Style for the form input group with error input */
-.form-group.error .form-input {
-    border-color: red;
-}
-    
-

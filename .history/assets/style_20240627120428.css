@@ -83,8 +83,6 @@ button[type="submit"]:hover {
     }
 }
 
-
-
 /* Style for the form container */
 .form-container {
     display: flex;
@@ -276,5 +274,3 @@ button[type="submit"]:hover {
 .form-group.error .form-input {
     border-color: red;
 }
-    
-
