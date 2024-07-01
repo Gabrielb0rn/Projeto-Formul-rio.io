@@ -1,0 +1,82 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    margin:30px;
+}
+
+.container input{
+  border:none;
+  border-bottom: solid 1px #666;
+  outline:none;
+}
+.container label{
+  position: absolute;
+  top:30px;
+  left:38px;
+  transition: 0.3s;
+}
+.container input:focus ~ label,
+.container   input:valid ~ label
+{
+  font-size:10px;
+  top: 15px;
+}
+
+
+/* Estilos de Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #45a049, #388E3C);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Variantes de Botões */
+.btn-secondary {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #1976D2, #1565C0);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #F44336, #D32F2F);
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #D32F2F, #C62828);
+}

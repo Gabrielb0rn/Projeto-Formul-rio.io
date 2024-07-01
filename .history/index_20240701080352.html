@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="exemplo@gmail.com">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="idade">Idade:</label>
@@ -42,42 +42,40 @@
                         <option value="ES">Espírito Santo</option>
                         <option value="GO">Goiás</option>
                         <option value="MA">Maranhão</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="MS">Mato Grosso do Sul</option>
                         <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
                         <option value="PA">Pará</option>
                         <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
                         <option value="PE">Pernambuco</option>
                         <option value="PI">Piauí</option>
-                        <option value="PR">Paraná</option>
                         <option value="RJ">Rio de Janeiro</option>
                         <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
                         <option value="RO">Rondônia</option>
                         <option value="RR">Roraima</option>
-                        <option value="RS">Rio Grande do Sul</option>
                         <option value="SC">Santa Catarina</option>
-                        <option value="SE">Sergipe</option>
                         <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
                     </select>
                 </div>
-                <div class="form-group inline-group">
-                    <div class="form-group">
-                        <label for="cidade">Cidade:</label>
-                        <select id="cidade" name="cidade" required>
-                            <option value="">Selecione sua cidade</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
                 </div>
-                <div class="form-group inline-group">
-                    <div>
-                        <label for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep" required placeholder="00000-000">
-                    </div>
-                    <div>
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" required placeholder="+00 00000-0000">
-                    </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
                 </div>
                 <div class="form-group">
                     <label for="nacionalidade">Nacionalidade:</label>
@@ -91,22 +89,20 @@
                     <label for="raca">Raça/Etnia:</label>
                     <select id="raca" name="raca" required>
                         <option value="">Selecione sua raça/etnia</option>
-                        <option value="Branca"></option>
-                        <option value="Preta"></option>
-                        <option value="Parda"></option>
-                        <option value="Amarela"></option>
-                        <option value="Indígena"></option>
-                        <option value="Alien"></option>
+                        <option value="Branca">Branca</option>
+                        <option value="Preta">Preta</option>
+                        <option value="Parda">Parda</option>
+                        <option value="Amarela">Amarela</option>
+                        <option value="Indígena">Indígena</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="religiao">Religião:</label>
                     <select id="religiao" name="religiao" required>
                         <option value="">Selecione sua religião</option>
-                        <option value="Católica"></option>
-                        <option value="Evangélica"></option>
-                        <option value="Espírita"></option>
-                        <option value="Outras"></option>
+                        <option value="Católica">Católica</option>
+                        <option value="Evangélica">Evangélica</option>
+                        <option value="Outras">Outras</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -116,6 +112,7 @@
                         <option value="Masculino">Masculino</option>
                         <option value="Feminino">Feminino</option>
                         <option value="Outro">Outro</option>
+                        <option value="Prefiro não dizer">Prefiro não dizer</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -126,10 +123,10 @@
                     <label for="escolaridade">Escolaridade:</label>
                     <select id="escolaridade" name="escolaridade" required>
                         <option value="">Selecione sua escolaridade</option>
-                        <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
-                        <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
-                        <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
-                        <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                        <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                        <option value="Fundamental Completo">Fundamental Completo</option>
+                        <option value="Médio Incompleto">Médio Incompleto</option>
+                        <option value="Médio Completo">Médio Completo</option>
                         <option value="Superior Incompleto">Superior Incompleto</option>
                         <option value="Superior Completo">Superior Completo</option>
                         <option value="Pós-Graduação">Pós-Graduação</option>
@@ -143,7 +140,7 @@
                     <label for="profissao">Profissão:</label>
                     <input type="text" id="profissao" name="profissao">
                 </div>
-                <div class="form-group radio-group">
+                <div class="form-group">
                     <label>Tipo de Moradia:</label>
                     <div>
                         <input type="radio" id="propria" name="moradia" value="propria">
@@ -158,41 +155,37 @@
                         <label for="cedida">Cedida</label>
                     </div>
                 </div>
-                <div class="form-group checkbox-group">
+                <div class="form-group">
                     <label>Acesso a Serviços Básicos:</label>
-                    <div class="checkbox-wrapper-1">
-                        <input id="agua" class="substituted" type="checkbox" name="servicos" value="agua">
-                        <label for="agua">Água</label>
+                    <div>
+                        <input type="checkbox" id="agua" name="servicos" value="agua">
+                        <label for="agua">Água Encanada</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="energia" class="substituted" type="checkbox" name="servicos" value="energia">
+                    <div>
+                        <input type="checkbox" id="esgoto" name="servicos" value="esgoto">
+                        <label for="esgoto">Esgoto</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="energia" name="servicos" value="energia">
                         <label for="energia">Energia Elétrica</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="saneamento" class="substituted" type="checkbox" name="servicos" value="saneamento">
-                        <label for="saneamento">Saneamento Básico</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="internet" class="substituted" type="checkbox" name="servicos" value="internet">
+                    <div>
+                        <input type="checkbox" id="internet" name="servicos" value="internet">
                         <label for="internet">Internet</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="lixo" class="substituted" type="checkbox" name="servicos" value="lixo">
-                        <label for="lixo">Coleta de Lixo</label>
-                    </div>
                 </div>
-                <div class="form-group radio-group">
-                    <label>Tipo de Assistência à Saúde:</label>
+                <div class="form-group">
+                    <label>Plano de Saúde:</label>
                     <div>
                         <input type="radio" id="publico" name="saude" value="publico">
-                        <label for="publico">Público</label>
+                        <label for="publico">Público (SUS)</label>
                     </div>
                     <div>
                         <input type="radio" id="privado" name="saude" value="privado">
                         <label for="privado">Privado</label>
                     </div>
                 </div>
-                <div class="form-group radio-group">
+                <div class="form-group">
                     <label>Possui Deficiência?</label>
                     <div>
                         <input type="radio" id="sim" name="deficiencia" value="sim">
@@ -203,12 +196,9 @@
                         <label for="nao">Não</label>
                     </div>
                 </div>
-                <button type="submit" class="btn">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
-        
     </main>
-    <script src="assets\scripts.js"></script>
 </body>
 </html>
-

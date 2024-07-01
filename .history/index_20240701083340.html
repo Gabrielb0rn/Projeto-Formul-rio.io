@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="exemplo@gmail.com">
+                    <input type="email" id="email" name="email" required placeholder="email@email.com">
                 </div>
                 <div class="form-group">
                     <label for="idade">Idade:</label>
@@ -91,31 +91,21 @@
                     <label for="raca">Raça/Etnia:</label>
                     <select id="raca" name="raca" required>
                         <option value="">Selecione sua raça/etnia</option>
-                        <option value="Branca"></option>
-                        <option value="Preta"></option>
-                        <option value="Parda"></option>
-                        <option value="Amarela"></option>
-                        <option value="Indígena"></option>
-                        <option value="Alien"></option>
+                        <!-- opções de raça/etnia -->
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="religiao">Religião:</label>
                     <select id="religiao" name="religiao" required>
                         <option value="">Selecione sua religião</option>
-                        <option value="Católica"></option>
-                        <option value="Evangélica"></option>
-                        <option value="Espírita"></option>
-                        <option value="Outras"></option>
+                        <!-- opções de religião -->
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="genero">Gênero:</label>
                     <select id="genero" name="genero" required>
                         <option value="">Selecione seu gênero</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outro">Outro</option>
+                        <!-- opções de gênero -->
                     </select>
                 </div>
                 <div class="form-group">
@@ -126,13 +116,7 @@
                     <label for="escolaridade">Escolaridade:</label>
                     <select id="escolaridade" name="escolaridade" required>
                         <option value="">Selecione sua escolaridade</option>
-                        <option value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto</option>
-                        <option value="Ensino Fundamental Completo">Ensino Fundamental Completo</option>
-                        <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
-                        <option value="Ensino Médio Completo">Ensino Médio Completo</option>
-                        <option value="Superior Incompleto">Superior Incompleto</option>
-                        <option value="Superior Completo">Superior Completo</option>
-                        <option value="Pós-Graduação">Pós-Graduação</option>
+                        <!-- opções de escolaridade -->
                     </select>
                 </div>
                 <div class="form-group">
@@ -160,25 +144,25 @@
                 </div>
                 <div class="form-group checkbox-group">
                     <label>Acesso a Serviços Básicos:</label>
-                    <div class="checkbox-wrapper-1">
-                        <input id="agua" class="substituted" type="checkbox" name="servicos" value="agua">
+                    <div>
+                        <input type="checkbox" id="agua" name="servicos" value="agua">
                         <label for="agua">Água</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="energia" class="substituted" type="checkbox" name="servicos" value="energia">
+                    <div>
+                        <input type="checkbox" id="energia" name="servicos" value="energia">
                         <label for="energia">Energia Elétrica</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="saneamento" class="substituted" type="checkbox" name="servicos" value="saneamento">
+                    <div>
+                        <input type="checkbox" id="saneamento" name="servicos" value="saneamento">
                         <label for="saneamento">Saneamento Básico</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="internet" class="substituted" type="checkbox" name="servicos" value="internet">
+                    <div>
+                        <input type="checkbox" id="internet" name="servicos" value="internet">
                         <label for="internet">Internet</label>
                     </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="lixo" class="substituted" type="checkbox" name="servicos" value="lixo">
-                        <label for="lixo">Coleta de Lixo</label>
+                    <div>
+                        <input type="checkbox" id="coleta" name="servicos" value="coleta">
+                        <label for="coleta">Coleta de Lixo</label>
                     </div>
                 </div>
                 <div class="form-group radio-group">
@@ -206,9 +190,7 @@
                 <button type="submit" class="btn">Enviar</button>
             </form>
         </div>
-        
     </main>
     <script src="assets\scripts.js"></script>
 </body>
 </html>
-

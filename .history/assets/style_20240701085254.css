@@ -1,0 +1,207 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos de Texto */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilos do Formulário */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="date"] {
+    padding: 9px;
+}
+
+button {
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #45a049, #388E3C);
+    transform: translateY(-2px);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Estilos de Grupo de Inputs */
+
+.form-group radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group radio-group label {
+    margin-right: 10px;
+}
+
+.form-group radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilos de Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos de Seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos de Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de Erros */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Sucesso */
+.success {
+    color: green;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Avisos */
+.warning {
+    color: orange;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Informações */
+.info {
+    color: blue;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Estilos de Formulário */
