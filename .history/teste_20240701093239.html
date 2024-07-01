@@ -1,121 +1,18 @@
-/* Estilos Globais */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-header {
-    background: linear-gradient(45deg, #4CAF50, #2E7D32);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Estilos de Texto */
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-/* Estilos do Formulário */
-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1em;
-    margin-top: 5px;
-}
-
-input[type="radio"], input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-input[type="date"] {
-    padding: 9px;
-}
-
-button {
-    background: linear-gradient(45deg, #4CAF50, #2E7D32);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2em;
-    margin-top: 20px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background: linear-gradient(45deg, #45a049, #388E3C);
-    transform: translateY(-2px);
-}
-
-/* Estilos Responsivos */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    form {
-        padding: 15px;
-    }
-
-    button {
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-
-.checkbox-wrapper-1 *,
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa do IBGE</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .checkbox-wrapper-1 *,
         .checkbox-wrapper-1 ::after,
         .checkbox-wrapper-1 ::before {
             box-sizing: border-box;
         }
         .checkbox-wrapper-1 [type=checkbox].substituted {
-            display: none;
+            display: none; /* Ocultar completamente o checkbox padrão */
         }
         .checkbox-wrapper-1 [type=checkbox].substituted + label:before {
             content: "";
@@ -182,51 +79,58 @@ button:hover {
             -webkit-user-select: none;
             user-select: none;
         }
-
-
-/* adasdsa */
-
-[type="radio"]:checked,
-  [type="radio"]:not(:checked) {
-    position: relative;
-    left: 14px;
-    z-index: 99;
-  }
-  
-  .checkbox-tools:checked + label,
-  .checkbox-tools:not(:checked) + label {
-    position: relative;
-    display: inline-block;
-    padding: 20px 20px 20px 40px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-align: left;
-    border-radius: 4px;
-    text-transform: uppercase;
-    color: black;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
-    left: -20px;
-  }
-  
-  .checkbox-tools:checked + label {
-    background-color: white;
-    border: 1px solid #333;
-    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .checkbox-tools:not(:checked) + label {
-    background-color: white;
-    border: 1px solid transparent;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .checkbox-tools:not(:checked) + label:hover,
-  .checkbox-tools:checked + label:hover,
-  [type="radio"]:hover + label {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    -webkit-transition: box-shadow 300ms ease;
-    transition: box-shadow 300ms ease;
-  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pesquisa do IBGE</h1>
+            <p>Sua opinião é importante para o desenvolvimento do Brasil.</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+				<input id="a" type="radio" name="hopping" value="a" checked>
+				<label for="a"><span></span>A</label>
+				<input id="b" type="radio" name="hopping" value="b">
+				<label for="b"><span></span>B</label>
+				<input id="c" type="radio" name="hopping" value="c">
+				<label for="c"><span></span>C</label>
+				<div class="worm">
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+					<div class="worm__segment"></div>
+				</div>
+			</form>
+        </div>
+    </main>
+</body>
+</html>
