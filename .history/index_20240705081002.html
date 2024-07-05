@@ -29,18 +29,6 @@
                     <input type="number" id="idade" name="idade" required>
                 </div>
                 <div class="form-group">
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" id="data_nascimento" name="data_nascimento" required>
-                </div>
-                <div class="form-group">
-                    <label for="nacionalidade">Nacionalidade:</label>
-                    <select id="nacionalidade" name="nacionalidade" required>
-                        <option value="">Selecione sua nacionalidade</option>
-                        <option value="Brasileiro">Brasileiro</option>
-                        <option value="Estrangeiro">Estrangeiro</option>
-                    </select>
-                </div>
-                <div class="form-group">
                     <label for="estado">Estado:</label>
                     <select id="estado" name="estado" required>
                         <option value="">Selecione seu estado</option>
@@ -93,6 +81,14 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <select id="nacionalidade" name="nacionalidade" required>
+                        <option value="">Selecione sua nacionalidade</option>
+                        <option value="Brasileiro">Brasileiro</option>
+                        <option value="Estrangeiro">Estrangeiro</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="raca">Raça/Etnia:</label>
                     <select id="raca" name="raca" required>
                         <option value="">Selecione sua raça/etnia</option>
@@ -124,6 +120,10 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required>
+                </div>
+                <div class="form-group">
                     <label for="escolaridade">Escolaridade:</label>
                     <select id="escolaridade" name="escolaridade" required>
                         <option value="">Selecione sua escolaridade</option>
@@ -147,15 +147,15 @@
                 <div class="form-group radio-group">
                     <label>Tipo de Moradia:</label>
                     <div>
-                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="propria" value="Propria">
+                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="propria">
                         <label for="propria">Própria</label>
                     </div>
                     <div>
-                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="alugada" value="Alugada">
+                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="alugada">
                         <label for="alugada">Alugada</label>
                     </div>
                     <div>
-                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="cedida" value="Cedida">
+                        <input class="checkbox-tools" type="radio" name="tipo_moradia" id="cedida">
                         <label for="cedida">Cedida</label>
                     </div>
                 </div>
@@ -170,60 +170,60 @@
                         <label for="energia">Energia Elétrica</label>
                     </div>
                     <div class="checkbox-wrapper-1">
-                        <input id="esgoto" class="substituted" type="checkbox" name="servicos" value="esgoto">
-                        <label for="esgoto">Esgoto</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="coleta" class="substituted" type="checkbox" name="servicos" value="coleta">
-                        <label for="coleta">Coleta de Lixo</label>
+                        <input id="saneamento" class="substituted" type="checkbox" name="servicos" value="saneamento">
+                        <label for="saneamento">Saneamento Básico</label>
                     </div>
                     <div class="checkbox-wrapper-1">
                         <input id="internet" class="substituted" type="checkbox" name="servicos" value="internet">
                         <label for="internet">Internet</label>
                     </div>
-                </div>
-                <div class="form-group checkbox-group">
-                    <label>Possui algum tipo de deficiência?</label>
                     <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_visual" class="substituted" type="checkbox" name="deficiencia" value="visual">
-                        <label for="deficiencia_visual">Visual</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_auditiva" class="substituted" type="checkbox" name="deficiencia" value="auditiva">
-                        <label for="deficiencia_auditiva">Auditiva</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_fisica" class="substituted" type="checkbox" name="deficiencia" value="fisica">
-                        <label for="deficiencia_fisica">Física</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_intelectual" class="substituted" type="checkbox" name="deficiencia" value="intelectual">
-                        <label for="deficiencia_intelectual">Intelectual</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_multipla" class="substituted" type="checkbox" name="deficiencia" value="multipla">
-                        <label for="deficiencia_multipla">Múltipla</label>
-                    </div>
-                    <div class="checkbox-wrapper-1">
-                        <input id="deficiencia_nenhuma" class="substituted" type="checkbox" name="deficiencia" value="nenhuma">
-                        <label for="deficiencia_nenhuma">Nenhuma</label>
+                        <input id="telefonia" class="substituted" type="checkbox" name="servicos" value="telefonia">
+                        <label for="telefonia">Telefonia</label>
                     </div>
                 </div>
-                <div class="form-group terms-group">
-                    <input type="checkbox" id="termos" name="termos" required>
-                    <label for="termos">Eu aceito os <a href="#">termos de uso</a>.</label>
+                <div class="form-group radio-group">
+                    <label>Plano de Saúde:</label>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="plano_saude" id="sim">
+                        <label for="sim">Sim</label>
+                    </div>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="plano_saude" id="nao">
+                        <label for="nao">Não</label>
+                    </div>
+                </div>
+                <div class="form-group radio-group">
+                    <label>Frequência de Atividades Físicas:</label>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="freq_atividades" id="diaria">
+                        <label for="diaria">Diária</label>
+                    </div>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="freq_atividades" id="semanal">
+                        <label for="semanal">Semanal</label>
+                    </div>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="freq_atividades" id="mensal">
+                        <label for="mensal">Mensal</label>
+                    </div>
+                    <div>
+                        <input class="checkbox-tools" type="radio" name="freq_atividades" id="nunca">
+                        <label for="nunca">Nunca</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" id="submit-button" disabled>Enviar</button>
+                    <label for="comentarios">Comentários:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
                 </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Eu li e aceito os <a href="#" id="termos-link">termos de serviço</a>.</label>
+                </div>
+                <button type="submit" id="submit-btn" disabled>Enviar</button>
             </form>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 IBGE. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    <script src="assets/script.js"></script>
+    <script src="assets/scripts.js"></script>
 </body>
 </html>
