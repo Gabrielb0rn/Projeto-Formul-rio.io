@@ -63,7 +63,7 @@ button[type="submit"]:hover {
  /* style.css */
  
  body {
-  display: flex;
++  display: flex;
    font-family: Arial, sans-serif;
    margin: 0;
    padding: 0;
@@ -107,3 +107,5 @@ button[type="submit"]:hover {
   background-color: #45a049;
   background-color: #0069d9;
  }
+ 
+ .error {

@@ -63,24 +63,24 @@ button[type="submit"]:hover {
  /* style.css */
  
  body {
-  display: flex;
++  display: flex;
    font-family: Arial, sans-serif;
    margin: 0;
    padding: 0;
-
+@@ -8,7 +9,7 @@
  }
  
  .container {
-  width: 400px;
-  width: 350px;
+-  width: 400px;
++  width: 350px;
    margin: 50px auto;
    background-color: #fff;
    padding: 30px;
- }
+
  h2 {
    text-align: center;
    margin-bottom: 20px;
-  color: #333;
++  color: #333;
  }
  
  .form-group {
@@ -92,7 +92,8 @@ button[type="submit"]:hover {
          padding: 10px;
          border: 1px solid #ccc;
          border-radius: 3px;
-}}
+ 
+        }
  
  button[type="submit"] {
   background-color: #4CAF50;
@@ -107,3 +108,5 @@ button[type="submit"]:hover {
   background-color: #45a049;
   background-color: #0069d9;
  }
+ 
+ .error {
