@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const estadoSelect = document.getElementById("estado");
     const cidadeSelect = document.getElementById("cidade");
+    const submitButton = document.getElementById("submit-button");
     const form = document.getElementById("form");
 
     const cidadesPorEstado = {
@@ -31,6 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
         SE: ["Aracaju", "Nossa Senhora do Socorro", "Lagarto"],
         SP: ["São Paulo", "Campinas", "Santos"],
         TO: ["Palmas", "Araguaína", "Gurupi"]
+    };
+
+    estadoSelect.addEventListener("change", (e) => {
+        const cidades = cidadesPorEstado[e.target.value] || [];
+        cidadeSelect.innerHTML = cidades.map(cidade => `<option value="${cidade}">${cidade}</option>`).join("");
+        cidadeSelect.disabled = cidades.length === 0;
+    });
+
+
+    const estadoSelect = document.getElementById("estado");
+    const cidadeSelect = document.getElementById("cidade");
+    const form = document.getElementById("form");
+
+    const cidadesPorEstado = {
+        AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
+        // Outras cidades aqui...
     };
 
     estadoSelect.addEventListener("change", (e) => {

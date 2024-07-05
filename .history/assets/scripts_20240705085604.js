@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const estadoSelect = document.getElementById("estado");
     const cidadeSelect = document.getElementById("cidade");
+    const submitButton = document.getElementById("submit-button");
     const form = document.getElementById("form");
 
     const cidadesPorEstado = {

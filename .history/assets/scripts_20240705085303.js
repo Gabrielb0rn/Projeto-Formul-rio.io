@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const estadoSelect = document.getElementById("estado");
     const cidadeSelect = document.getElementById("cidade");
+    const submitButton = document.getElementById("submit-button");
     const form = document.getElementById("form");
 
     const cidadesPorEstado = {
@@ -39,6 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
         cidadeSelect.disabled = cidades.length === 0;
     });
 
+    form.addEventListener("input", () => {
+        submitButton.disabled = !form.checkValidity();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form");
+
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
@@ -66,3 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+

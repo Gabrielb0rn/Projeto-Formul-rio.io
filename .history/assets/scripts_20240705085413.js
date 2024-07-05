@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const estadoSelect = document.getElementById("estado");
     const cidadeSelect = document.getElementById("cidade");
+    const submitButton = document.getElementById("submit-button");
     const form = document.getElementById("form");
 
     const cidadesPorEstado = {
@@ -39,30 +40,38 @@ document.addEventListener("DOMContentLoaded", () => {
         cidadeSelect.disabled = cidades.length === 0;
     });
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const formJSON = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formJSON)
-            });
-
-            if (response.ok) {
-                alert("Formulário enviado com sucesso!");
-                form.reset();
-            } else {
-                alert("Houve um erro ao enviar o formulário.");
-            }
-        } catch (error) {
-            console.error("Erro ao enviar o formulário:", error);
-            alert("Houve um erro ao enviar o formulário.");
-        }
+    form.addEventListener("input", () => {
+        submitButton.disabled = !form.checkValidity();
     });
 });
+
+var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
