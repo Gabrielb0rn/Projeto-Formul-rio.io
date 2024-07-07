@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
-
     function showAlert(message, type) {
         const alertBox = document.createElement("div");
         alertBox.className = `alert ${type}`;

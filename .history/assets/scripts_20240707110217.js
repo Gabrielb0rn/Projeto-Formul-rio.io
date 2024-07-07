@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cidadeSelect = document.getElementById("cidade");
     const form = document.getElementById("form");
     const submitButton = document.getElementById("submit-button");
-    const termsCheckbox = document.getElementById("aceito-termos");
+    const termsCheckbox = document.getElementById("termos");
 
     const cidadesPorEstado = {
         AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
@@ -62,18 +62,5 @@ document.addEventListener("DOMContentLoaded", () => {
             submitButton.disabled = true;
             submitButton.style.backgroundColor = "#6c757d";
         }
-    }
-
-    
-
-    function showAlert(message, type) {
-        const alertBox = document.createElement("div");
-        alertBox.className = `alert ${type}`;
-        alertBox.textContent = message;
-        document.body.appendChild(alertBox);
-
-        setTimeout(() => {
-            alertBox.remove();
-        }, 3000);
     }
 });

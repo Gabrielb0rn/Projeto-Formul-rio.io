@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cidadeSelect = document.getElementById("cidade");
     const form = document.getElementById("form");
     const submitButton = document.getElementById("submit-button");
-    const termsCheckbox = document.getElementById("aceito-termos");
+    const termsCheckbox = document.getElementById("termos");
 
     const cidadesPorEstado = {
         AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");

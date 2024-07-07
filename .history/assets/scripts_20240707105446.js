@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cidadeSelect = document.getElementById("cidade");
     const form = document.getElementById("form");
     const submitButton = document.getElementById("submit-button");
-    const termsCheckbox = document.getElementById("aceito-termos");
+    const termsCheckbox = document.getElementById("termos");
 
     const cidadesPorEstado = {
         AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
@@ -39,32 +39,61 @@ document.addEventListener("DOMContentLoaded", () => {
         const cidades = cidadesPorEstado[e.target.value] || [];
         cidadeSelect.innerHTML = cidades.map(cidade => `<option value="${cidade}">${cidade}</option>`).join("");
         cidadeSelect.disabled = cidades.length === 0;
-        validateForm();
     });
 
-    termsCheckbox.addEventListener("change", validateForm);
-    form.addEventListener("input", validateForm);
+    termsCheckbox.addEventListener("change", function() {
+        submitButton.disabled = !termsCheckbox.checked;
+        if (termsCheckbox.checked) {
+            submitButton.style.backgroundColor = "green";
+        } else {
+            submitButton.style.backgroundColor = "grey";
+        }
+    });
 
-    function validateForm() {
-        const requiredFields = form.querySelectorAll("[required]");
-        let allFilled = true;
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-        requiredFields.forEach(field => {
-            if (!field.value.trim() || (field.type === "checkbox" && !field.checked)) {
-                allFilled = false;
+        const formData = new FormData(form);
+        const formJSON = Object.fromEntries(formData.entries());
+
+        // Verificação dos campos obrigatórios
+        let valid = true;
+        form.querySelectorAll("[required]").forEach(input => {
+            if (!input.value.trim()) {
+                valid = false;
+                input.classList.add("error");
+            } else {
+                input.classList.remove("error");
             }
         });
 
-        if (termsCheckbox.checked && allFilled) {
-            submitButton.disabled = false;
-            submitButton.style.backgroundColor = "#007bff";
-        } else {
-            submitButton.disabled = true;
-            submitButton.style.backgroundColor = "#6c757d";
+        if (!valid) {
+            showAlert("Por favor, preencha todos os campos obrigatórios.", "error");
+            return;
         }
-    }
 
-    
+        try {
+            const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formJSON)
+            });
+
+            if (response.ok) {
+                showAlert("Formulário enviado com sucesso!", "success");
+                form.reset();
+                submitButton.style.backgroundColor = "grey";
+                submitButton.disabled = true;
+            } else {
+                showAlert("Houve um erro ao enviar o formulário.", "error");
+            }
+        } catch (error) {
+            console.error("Erro ao enviar o formulário:", error);
+            showAlert("Houve um erro ao enviar o formulário.", "error");
+        }
+    });
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");

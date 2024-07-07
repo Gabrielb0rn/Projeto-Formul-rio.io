@@ -95,10 +95,8 @@ form:hover {
     min-width: calc(50% - 20px);
 }
 
-/* Checkbox and Radio Styles */
 .checkbox-group, .radio-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .checkbox-group label,
@@ -164,19 +162,12 @@ form:hover {
 .terms-group {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    justify-content: flex-start;
 }
 
 .terms-group input {
-    width: 20px;
-    height: 20px;
     margin-right: 10px;
-    cursor: pointer;
-    accent-color: #007bff;
 }
 
-/* Button Styles */
 button {
     width: 100%;
     padding: 15px;
@@ -198,39 +189,6 @@ button:hover {
 button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
-}
-
-/* Alert Styles */
-.alert {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 20px;
-    border-radius: 5px;
-    color: white;
-    font-size: 1em;
-    z-index: 1000;
-    animation: fade-in-out 3s ease-in-out;
-}
-
-.alert.success {
-    background-color: #28a745;
-}
-
-.alert.error {
-    background-color: #dc3545;
-}
-
-.error {
-    border-color: red;
-}
-
-@keyframes fade-in-out {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
 }
 
 /* Footer Styles */
@@ -256,41 +214,4 @@ footer p {
     .inline-group .form-group {
         min-width: 100%;
     }
-}
-
-/* Agradecimento Styles */
-.agradecimento-mensagem {
-    text-align: center;
-    padding: 50px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.agradecimento-mensagem h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.agradecimento-mensagem p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #495057;
-}
-
-.botao-voltar {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
 }
