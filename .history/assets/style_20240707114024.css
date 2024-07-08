@@ -258,39 +258,3 @@ footer p {
     }
 }
 
-/* Agradecimento Styles */
-.agradecimento-mensagem {
-    text-align: center;
-    padding: 50px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.agradecimento-mensagem h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.agradecimento-mensagem p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #495057;
-}
-
-.botao-voltar {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cidadeSelect = document.getElementById("cidade");
     const form = document.getElementById("form");
     const submitButton = document.getElementById("submit-button");
-    const termsCheckbox = document.getElementById("aceito-termos");
+    const termsCheckbox = document.getElementById("termos");
 
     const cidadesPorEstado = {
         AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     termsCheckbox.addEventListener("change", validateForm);
+
     form.addEventListener("input", validateForm);
 
     function validateForm() {
@@ -50,21 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let allFilled = true;
 
         requiredFields.forEach(field => {
-            if (!field.value.trim() || (field.type === "checkbox" && !field.checked)) {
+            if (!field.value.trim()) {
                 allFilled = false;
             }
         });
 
         if (termsCheckbox.checked && allFilled) {
             submitButton.disabled = false;
-            submitButton.style.backgroundColor = "#007bff";
+            submitButton.style.backgroundColor = "blue";
         } else {
             submitButton.disabled = true;
-            submitButton.style.backgroundColor = "#6c757d";
+            submitButton.style.backgroundColor = "grey";
         }
     }
-
-    
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");

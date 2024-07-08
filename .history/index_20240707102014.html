@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa do IBGE</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="shortcut icon" type="ico" href="resources/ibge-logo2.ico">
     
 </head>
 <body>
@@ -17,7 +16,7 @@
     </header>
     <main>
         <div class="container">
-            <form id="form" action="agradecimento.html" method="POST">
+            <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome completo:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -212,8 +211,8 @@
                     </div>
                 </div>
                 <div class="form-group terms-group">
-                    <input type="checkbox" id="aceito-termos" name="aceito-termos" required>
-                    <label for="aceito-termos">Aceito os <a href="TDU.html">Termos e Condições</a> e a <a href="PDP.html">Política de Privacidade</a></label>
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Eu aceito os <a href="TDU">termos de uso</a>.</label>
                 </div>
                 <div class="form-group">
                     <button type="submit" id="submit-button" disabled>Enviar</button>
@@ -223,9 +222,9 @@
     </main>
     <footer>
         <div class="container">
-            <img src="resources/footer-ibge.png" alt="ibge" width="200" height="50">
+            <p>&copy; 2024 IBGE. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="assets\scripts.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>

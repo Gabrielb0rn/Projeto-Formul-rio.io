@@ -235,6 +235,7 @@ button:disabled {
 
 /* Footer Styles */
 footer {
+    margin: 1%;
     background: linear-gradient(135deg, #007bff 0%, #0062cc 100%);
     color: white;
     text-align: center;

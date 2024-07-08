@@ -64,7 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("https://formspree.io/f/YOUR_FORM_ID", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = "agradecimento.html";
+            } else {
+                showAlert("Houve um erro ao enviar o formulário. Tente novamente.", "error");
+            }
+        }).catch(error => {
+            showAlert("Houve um erro ao enviar o formulário. Tente novamente.", "error");
+        });
+    });
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");

@@ -64,7 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+    form.addEventListener("submit", (e) => {
+        
+                window.location.href = "agradecimento.html";
+            } else {
+                showAlert("Houve um erro ao enviar o formulário. Tente novamente.", "error");
+            }
+        }).catch(error => {
+            showAlert("Houve um erro ao enviar o formulário. Tente novamente.", "error");
+        });
+    });
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");

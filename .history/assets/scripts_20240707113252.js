@@ -64,7 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+    form.addEventListener("submit", (e) => {
+        
+                window.location.href = "agradecimento.html";
+    }
+            
 
     function showAlert(message, type) {
         const alertBox = document.createElement("div");
