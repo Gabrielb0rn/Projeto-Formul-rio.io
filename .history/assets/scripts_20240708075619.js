@@ -1,54 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const estado = document.getElementById("estado");
-    const cidade = document.getElementById("cidade");
+//INATIVO
 
-    const cidadesPorEstado = {
-        "AC": ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
-        "AL": ["Maceió", "Arapiraca", "Palmeira dos Índios"],
-        "AP": ["Macapá", "Santana", "Laranjal do Jari"],
-        "AM": ["Manaus", "Parintins", "Itacoatiara"],
-        "BA": ["Salvador", "Feira de Santana", "Vitória da Conquista"],
-        "CE": ["Fortaleza", "Caucaia", "Juazeiro do Norte"],
-        "DF": ["Brasília"],
-        "ES": ["Vitória", "Vila Velha", "Serra"],
-        "GO": ["Goiânia", "Anápolis", "Aparecida de Goiânia"],
-        "MA": ["São Luís", "Imperatriz", "Caxias"],
-        "MG": ["Belo Horizonte", "Uberlândia", "Contagem"],
-        "MS": ["Campo Grande", "Dourados", "Três Lagoas"],
-        "MT": ["Cuiabá", "Várzea Grande", "Rondonópolis"],
-        "PA": ["Belém", "Ananindeua", "Santarém"],
-        "PB": ["João Pessoa", "Campina Grande", "Santa Rita"],
-        "PE": ["Recife", "Jaboatão dos Guararapes", "Olinda"],
-        "PI": ["Teresina", "Parnaíba", "Picos"],
-        "PR": ["Curitiba", "Londrina", "Maringá"],
-        "RJ": ["Rio de Janeiro", "Niterói", "Duque de Caxias"],
-        "RN": ["Natal", "Mossoró", "Parnamirim"],
-        "RO": ["Porto Velho", "Ji-Paraná", "Ariquemes"],
-        "RR": ["Boa Vista", "Rorainópolis", "Caracaraí"],
-        "RS": ["Porto Alegre", "Caxias do Sul", "Pelotas"],
-        "SC": ["Florianópolis", "Joinville", "Blumenau"],
-        "SE": ["Aracaju", "Nossa Senhora do Socorro", "Lagarto"],
-        "SP": ["São Paulo", "Campinas", "Santos"],
-        "TO": ["Palmas", "Araguaína", "Gurupi"]
-    };
-
-    estado.addEventListener("change", function () {
-        const selectedEstado = estado.value;
-        const cidades = cidadesPorEstado[selectedEstado] || [];
-        cidade.innerHTML = cidades.map(cidade => `<option value="${cidade}">${cidade}</option>`).join("");
-    });
-});
-
-
-
-
-
-
-
-
-
-//---------------------------- INATIVO ---------------------------------
-//
 // document.addEventListener("DOMContentLoaded", () => {
 //     const estadoSelect = document.getElementById("estado");
 //     const cidadeSelect = document.getElementById("cidade");
@@ -126,5 +77,44 @@ document.addEventListener("DOMContentLoaded", function () {
 //         }, 3000);
 //     }
 // });
-//
-//---------------------------- INATIVO ---------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const estado = document.getElementById("estado");
+    const cidade = document.getElementById("cidade");
+
+    const cidadesPorEstado = {
+        "AC": ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
+        "AL": ["Maceió", "Arapiraca", "Palmeira dos Índios"],
+        "AP": ["Macapá", "Santana", "Laranjal do Jari"],
+        "AM": ["Manaus", "Parintins", "Itacoatiara"],
+        "BA": ["Salvador", "Feira de Santana", "Vitória da Conquista"],
+        "CE": ["Fortaleza", "Caucaia", "Juazeiro do Norte"],
+        "DF": ["Brasília"],
+        "ES": ["Vitória", "Vila Velha", "Serra"],
+        "GO": ["Goiânia", "Anápolis", "Aparecida de Goiânia"],
+        "MA": ["São Luís", "Imperatriz", "Caxias"],
+        "MG": ["Belo Horizonte", "Uberlândia", "Contagem"],
+        "MS": ["Campo Grande", "Dourados", "Três Lagoas"],
+        "MT": ["Cuiabá", "Várzea Grande", "Rondonópolis"],
+        "PA": ["Belém", "Ananindeua", "Santarém"],
+        "PB": ["João Pessoa", "Campina Grande", "Santa Rita"],
+        "PE": ["Recife", "Jaboatão dos Guararapes", "Olinda"],
+        "PI": ["Teresina", "Parnaíba", "Picos"],
+        "PR": ["Curitiba", "Londrina", "Maringá"],
+        "RJ": ["Rio de Janeiro", "Niterói", "Duque de Caxias"],
+        "RN": ["Natal", "Mossoró", "Parnamirim"],
+        "RO": ["Porto Velho", "Ji-Paraná", "Ariquemes"],
+        "RR": ["Boa Vista", "Rorainópolis", "Caracaraí"],
+        "RS": ["Porto Alegre", "Caxias do Sul", "Pelotas"],
+        "SC": ["Florianópolis", "Joinville", "Blumenau"],
+        "SE": ["Aracaju", "Nossa Senhora do Socorro", "Lagarto"],
+        "SP": ["São Paulo", "Campinas", "Santos"],
+        "TO": ["Palmas", "Araguaína", "Gurupi"]
+    };
+
+    estado.addEventListener("change", function () {
+        const selectedEstado = estado.value;
+        const cidades = cidadesPorEstado[selectedEstado] || [];
+        cidade.innerHTML = cidades.map(cidade => `<option value="${cidade}">${cidade}</option>`).join("");
+    });
+});

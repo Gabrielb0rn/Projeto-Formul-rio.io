@@ -1,5 +1,3 @@
-<!------------------------------ INATIVO ----------------------------------->
-
 <?php
 $servername = "localhost";
 $username = "username";
@@ -48,4 +46,3 @@ $conn->close();
 
 echo json_encode($response);
 ?>
-<!------------------------------ INATIVO ----------------------------------->

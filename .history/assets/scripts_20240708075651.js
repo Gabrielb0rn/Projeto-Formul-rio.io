@@ -42,11 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
 //---------------------------- INATIVO ---------------------------------
 //
 // document.addEventListener("DOMContentLoaded", () => {

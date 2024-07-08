@@ -1,6 +1,6 @@
-<!------------------------------ INATIVO ----------------------------------->
-
 <?php
+
+
 $servername = "localhost";
 $username = "username";
 $password = "password";
@@ -48,4 +48,3 @@ $conn->close();
 
 echo json_encode($response);
 ?>
-<!------------------------------ INATIVO ----------------------------------->

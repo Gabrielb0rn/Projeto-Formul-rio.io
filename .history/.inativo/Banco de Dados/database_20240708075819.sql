@@ -27,5 +27,3 @@ CREATE TABLE survey_responses (
     termos BOOLEAN NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
----------------------------- INATIVO ---------------------------------

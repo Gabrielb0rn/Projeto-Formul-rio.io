@@ -1,5 +1,3 @@
-<!------------------------------ INATIVO ----------------------------------->
-
 <?php
 $servername = "localhost";
 $username = "username";

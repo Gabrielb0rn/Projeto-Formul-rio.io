@@ -1,5 +1,3 @@
-// ---------------------------- INATIVO ---------------------------------
-
 var form = document.getElementById("mform");
     
     async function handleSubmit(event) {
