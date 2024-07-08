@@ -1,4 +1,4 @@
-var form = document.getElementById("mform");
+var form = document.getElementById("form");
     
     async function handleSubmit(event) {
       event.preventDefault();

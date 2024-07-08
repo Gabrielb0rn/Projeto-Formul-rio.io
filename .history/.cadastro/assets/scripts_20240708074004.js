@@ -1,8 +1,8 @@
-var form = document.getElementById("mform");
+var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
       event.preventDefault();
-      var status = document.getElementById("form");
+      var status = document.getElementById("mform-status");
       var data = new FormData(event.target);
       fetch(event.target.action, {
         method: form.method,
